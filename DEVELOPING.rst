@@ -102,6 +102,7 @@ populate *all* collections, you can use::
     -f invenio_opendata/testsuite/data/atlas/atlas-derived-datasets.xml \
     -f invenio_opendata/testsuite/data/atlas/atlas-higgs-challenge-2014.xml \
     -f invenio_opendata/testsuite/data/atlas/atlas-learning-resources.xml \
+    -f invenio_opendata/testsuite/data/atlas/atlas-tools.xml \
     -f invenio_opendata/testsuite/data/cms/cms-author-list.xml \
     -f invenio_opendata/testsuite/data/cms/cms-csv-files.xml \
     -f invenio_opendata/testsuite/data/cms/cms-derived-pattuples-ana.xml \
@@ -113,11 +114,28 @@ populate *all* collections, you can use::
     -f invenio_opendata/testsuite/data/cms/cms-open-data-instructions.xml \
     -f invenio_opendata/testsuite/data/cms/cms-primary-datasets.xml \
     -f invenio_opendata/testsuite/data/cms/cms-primary-datasets-Run2011A.xml \
+    -f invenio_opendata/testsuite/data/cms/cms-trigger-information-Run2011A.xml \
+    -f invenio_opendata/testsuite/data/cms/cms-trigger-path-Run2011A.xml \
     -f invenio_opendata/testsuite/data/cms/cms-tools-ana.xml \
     -f invenio_opendata/testsuite/data/cms/cms-tools-dimuon-filter.xml \
     -f invenio_opendata/testsuite/data/cms/cms-tools-ispy.xml \
     -f invenio_opendata/testsuite/data/cms/cms-tools-vm-image.xml \
     -f invenio_opendata/testsuite/data/cms/cms-validated-runs.xml \
+    -f invenio_opendata/testsuite/data/cms/cms-condition-data-Run2010B.xml \
+    -f invenio_opendata/testsuite/data/cms/cms-condition-data-Run2011A.xml \
+    -f invenio_opendata/testsuite/data/cms/cms-configuration-files-Run2011A.xml \
+    -f invenio_opendata/testsuite/data/cms/cms-hlt-2011-configuration-files.xml \
+    -f invenio_opendata/testsuite/data/cms/cms-pileup-configuration-files.xml \
+    -f invenio_opendata/testsuite/data/cms/cms-simulated-datasets-Run2011A.xml \
+    -f invenio_opendata/testsuite/data/cms/cms-tools-dimuon-spectrum-2010.xml \
+    -f invenio_opendata/testsuite/data/cms/cms-tools-vm-image-Run2011A.xml \
+    -f invenio_opendata/testsuite/data/cms/cms-tools-cmssw.xml \
+    -f invenio_opendata/testsuite/data/cms/cms-tools-cmssw-Run2011A.xml \
+    -f invenio_opendata/testsuite/data/cms/cms-tools-ispy-Run2011A.xml \
+    -f invenio_opendata/testsuite/data/cms/cms-tools-ana-Run2011A.xml \
+    -f invenio_opendata/testsuite/data/cms/cms-derived-pattuples-ana-Run2011A.xml \
+    -f invenio_opendata/testsuite/data/cms/cms-author-list-Run2011A.xml \
+    -f invenio_opendata/testsuite/data/cms/cms-validation-code-Run2010B.xml \
     -f invenio_opendata/testsuite/data/lhcb/lhcb-derived-datasets.xml \
     -f invenio_opendata/testsuite/data/lhcb/lhcb-learning-resources.xml \
     -f invenio_opendata/testsuite/data/lhcb/lhcb-tools.xml \

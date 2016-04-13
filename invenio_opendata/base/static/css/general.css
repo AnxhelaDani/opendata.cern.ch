@@ -23,7 +23,8 @@ ol.gen-menu >li>ul {
   width: auto;
 }
 .gen-menu ul li a,
-.gen-menu ul li a:hover{
+.gen-menu ul li a:hover,
+.gen-menu ul li a:focus{
   background-color: #fff;
   color: inherit;
   padding: 1px 2px;
@@ -34,6 +35,10 @@ ol.gen-menu >li>ul {
 }
 .gen-menu ul {
   width: 100%;
+}
+
+.gen-menu li strong {
+  color: #fff;
 }
 .gen-menu a,
 .gen-menu a:hover,
@@ -302,7 +307,12 @@ ol.gen-menu >li>ul {
 }
 
 .yeartabs-container {
-  margin-top: 50px;  
+  margin-top: 50px;
+}
+
+
+#phys_abou .yeartabs-container {
+  margin-top: 0;
 }
 
 .yeartabs {

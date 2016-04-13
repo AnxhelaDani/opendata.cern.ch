@@ -1,3 +1,5 @@
+<!-- START CMS VM instructions -->
+
 {% macro about_cms_msg(url) %}
   <h1 class="col-md-12">CMS 2010 Virtual Machines: How to install</h1>
   <p class="col-md-12">
@@ -5,35 +7,31 @@
   </p>
 {% endmacro %}
 
-{% macro about_alice_msg(url) %}
-  <div class="title">ALICE Virtual Machines: How to install</div>
-{% endmacro %}
-
-{% macro install_s1() %}
+{% macro cms_install_2010_s1() %}
   <h2>Step 1: Installing VirtualBox</h2>
   <p>VirtualBox is a free, open source and multiplatform application to run virtual machines: you can <a href="https://www.VirtualBox.org/wiki/Downloads">download</a> the package for your platform from the Downloads page.</p>
   <p>You will need administrative ("root") privileges on every platform to perform the installation of VirtualBox.</p>
-  <p>Note: the latest tested version of VirtualBox working with CernVM is 4.3.14. If you have troubles with the latest verion of VirtualBox, pick that one: the full history of VirtualBox versions is available <a href="https://www.VirtualBox.org/wiki/Download_Old_Builds">on a different page.</a></p>
+  <p>Note: the latest tested version of VirtualBox working with this CMS-specific CernVM image is 4.3.14. If you have troubles with the latest version of VirtualBox, pick that one: the full history of VirtualBox versions is available <a href="https://www.VirtualBox.org/wiki/Download_Old_Builds">on a different page.</a></p>
 {% endmacro %}
 
-{% macro install_s2(url) %}
+{% macro cms_install_2010_s2(url) %}
   <h2>Step 2: Downloading and Creating a Virtual Machine</h2>
   <p>
     <strong>Important</strong>: Before you download the CernVM, note that the imported settings may not always work on your host machine. Please see <a href="#issues">Issues and Limitations</a> if you encounter any problems with booting the VM.
   </p>
   <p>
-    Next download the CMS-specific CernVM image as OVA file from: <a href="{{url}}">CMS Open Data (latest)</a>.
+    Next download the CMS-specific CernVM image as OVA file from: <a href="{{url}}">CMS VM Image for 2010 CMS open data</a>.
   </p>
   <p>
     By double clicking the downloaded file, VirtualBox imports the image with ready-to-run settings: in case of any problems with booting with these default settings, see <a href="#issues">Issues and Limitations</a>. Then, you launch the CMS-specific CernVM, which boots into the graphical user interface and sets up the CMS environment.
   </p>
 {% endmacro %}
 
-{% macro validate_intro(url) %}
+{% macro cms_validate_intro_2010(url) %}
   <p>The validation procedure tests that the CMS environment is installed and operational on your virtual machine, and that you have access to the ROOT files. You may skip this step if you want, and head straight to <a href="{{url}}">Getting Started with CMS data</a>. However, these steps give you a quick introduction to the CMS environment.</p>
 {% endmacro %}
 
-{% macro validate_s1() %}
+{% macro cms_validate_2010_s1() %}
   <h2>Set up the CMS environment and run a demo analyzer</h2>
   <p>
       <div class="it">Open a terminal with the X terminal emulator (an icon bottom-left of the VM screen)</div>
@@ -83,13 +81,13 @@ System 3 3</pre>
   </p>
 {% endmacro %}
 
-{% macro validate_s2(url) %}
+{% macro cms_validate_2010_s2(url) %}
 <h2>Validation report</h2>
 <p>The CMS-specific CERN Virtual Machine has been tested on several operating systems, VM softwares and hardware configurations. However, we cannot guarantee that it will work under all conditions. Problems can often be traced to a user’s particular system settings. </p>
 <p>Solutions to some of the common problems encountered are listed below. <a href="{{url}}">This validation report</a> contains more information, including a full list of tested machines and configurations, along with issues faced during testing.</p>
 {% endmacro %}
 
-{% macro limitation_s1() %}
+{% macro cms_limitation_2010_s1() %}
 <h2>Known Issues FAQ</h2>
 <div class="heading"><b>Q: </b>The following error message appears when the Virtual Machine is started: "Could not start the machine CMS Open Data because the following physical network interfaces were not found: vboxnet0 (adapter 2). You can either change the machine's network settings or stop the machine."</div>
 <p><b>A: </b>Change the Network settings for adapter 2 from "Host-only Adapter" to "NAT". The VM should then start correctly.</p>
@@ -98,12 +96,6 @@ System 3 3</pre>
 <div class="heading"><b>Q: </b>On Windows 7 and 8, this error message appears: "VT-X/AMD-V hardware acceleration is not available on your system. Your 64-bit guest will fail to detect a 64-but CPU and will not be able to boot."
 </div>
 <p><b>A: </b>Check whether your processor supports the VT-X feature by going to <a href="http://ark.intel.com/">http://ark.intel.com/</a>: Intel® Virtualisation Technology (VT-x) should be checked as "yes". Then, when the host machine is booting (just after switching it on) press the appropriate function key to get to the setup, go to advanced settings, and enable the virtualisation extensions of the CPU. Note that some recent Acer Inspire laptop models do not give access to the VT-X feature in the BIOS setup even if the processor supports it.</p>
-<div class="heading"><b>Q: </b>The CMS-specific VM does not boot on Windows 7: it diplays "automatic boot in 1 second", but nothing happens.
-</div>
-
-<p><b>A: </b>This problem could not be reproduced on a different Windows 7 machine, running the same version of VirtualBox with the same VM image. No solution is offered at the moment. Please check your VirtualBox and host-machine settings.</p>
-<div class="heading"><b>Q: </b>The cursor is captured to the VM screen, and the "host key" combination, which is indicated down-right of the screen and should enable the cursor to move outside of the VM machine screen, does not work (Windows 7 with a Swiss-French keyboard, VirtualBox 4.3.12).</div>
-<p><b>A: </b>This problem could not be reproduced on a different Windows 7 machine with a Swiss-French keyboard, running the same version of VirtualBox with the same VM image. No solution is offered at the moment. Please check your VirtualBox and host-machine settings.</p>
 <div class="heading"><b>Q: </b>The VM does not inherit the keyboard layout of the host machine.</div>
 <p><b>A: </b>The layout can be changed by using setxkbmap from a terminal inside the Virtual Machine. For example a user with a Swiss keyboard with French variant would type <kbd>setxkbmap 'ch(fr)'</kbd> in the terminal and a user with a Finnish keyboard would type <kbd>setxkbmap fi</kbd>. This can also be solved by using the GUI, which can be launched either from the graphical menu in the lower left corner (Preferences &rarr; Keyboard) or by typing in the console: xfce4-keyboard-settings. In the Layout tab it is possible to change the keyboard model and the layout. If you wish to keep these settings after reboot, you should delete all the other layouts from the menu.
 </p>
@@ -111,6 +103,18 @@ System 3 3</pre>
 <p><b>A: </b>Using a terminal such as xterm will allow reading and writing special characters.</p>
 <div class="heading"><b>Q: </b>Users who use high resolutions on small displays and have set their host machines DPI manually, for example through <kbd>.Xresources</kbd> on Linux (X11), may find that everything is too small to be read efficiently. (Also helpful to users who have difficulties in reading the fonts and other visual information on the image due to the size of the graphical components.)
 </div>
-
 <p><b>A: </b>The DPI can easily be adjusted from Xfce menu &rarr; Preferences &rarr; Appearance &rarr; Fonts &rarr; DPI. This enhances the readability and general usability significantly.</p>
+<div class="heading"><b>Q: </b>Resizing the VM window doesn't resize its contents.
+</div>
+<p><b>A: </b>This appears to only occur when a new VM image is launched for the first time. The contents should resize after several minutes (up to half an hour), and the problem should not manifest when the VM image is opened a second time.</p>
 {% endmacro %}
+
+<!-- END CMS VM instructions -->
+
+<!-- START ALICE VM instructions -->
+
+{% macro about_alice_msg(url) %}
+  <div class="title">ALICE Virtual Machines: How to install</div>
+{% endmacro %}
+
+<!-- END ALICE VM instructions -->

@@ -7,6 +7,7 @@
     </datafield>
     <datafield tag="110" ind1=" " ind2=" ">
       <subfield code="a">CMS Collaboration</subfield>
+      <subfield code="w">450</subfield>
     </datafield>
     <datafield tag="245" ind1=" " ind2=" ">
       <subfield code="a">CMS list of validated runs for primary datasets for 2010 data taking</subfield>
@@ -44,6 +45,9 @@
       <subfield code="a">CERN-LHC</subfield>
       <subfield code="e">CMS</subfield>
     </datafield>
+    <datafield tag="964" ind1=" " ind2="0">
+      <subfield code="c">Run2010B</subfield>
+    </datafield>
     <datafield tag="980" ind1=" " ind2=" ">
       <subfield code="a">CMS-Validated-Runs</subfield>
     </datafield>
@@ -62,6 +66,7 @@
     </datafield>
     <datafield tag="110" ind1=" " ind2=" ">
       <subfield code="a">CMS Collaboration</subfield>
+      <subfield code="w">451</subfield>
     </datafield>
     <datafield tag="245" ind1=" " ind2=" ">
       <subfield code="a">CMS list of validated runs for primary datasets for 2011 data taking</subfield>
@@ -98,6 +103,9 @@
     <datafield tag="693" ind1=" " ind2=" ">
       <subfield code="a">CERN-LHC</subfield>
       <subfield code="e">CMS</subfield>
+    </datafield>
+    <datafield tag="964" ind1=" " ind2="0">
+      <subfield code="c">Run2011A</subfield>
     </datafield>
     <datafield tag="980" ind1=" " ind2=" ">
       <subfield code="a">CMS-Validated-Runs</subfield>

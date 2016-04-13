@@ -32,7 +32,7 @@
                   <ul class="col-md-12">
                     <li>A downloadable <a href="{{ url_for('.data_vms', exp = 'CMS') }}">Virtual Machine (VM)</a> image with the CMS software environment through which the primary datasets can be accessed</li>
                     <li>An <a href="{{ url_for('.get_started', exp = 'CMS') }}">analysis example chain</a>, reading the primary dataset and producing intermediate derived data for the final analysis</li>
-                    <li>Ready-to-use online applications, such as <a href="{{ url_for('.visualise_events') }}">an event display</a> and <a href="{{ url_for('.visualise_histo') }}">simple histogramming software</a></li>
+                    <li>Ready-to-use online applications, such as <a href="{{ url_for('.visualise_events', exp='CMS') }}">an event display</a> and <a href="{{ url_for('.visualise_histo', exp='CMS') }}">simple histogramming software</a></li>
                     <li>Source code for the various examples and applications, available in the <a href="/search?cc=CMS-Tools">CMS Tools</a> collection</li>
                   </ul>
                 </li>
@@ -44,7 +44,7 @@
           <div class="gen-box">
             <h2 id="primary-datasets">Primary datasets</h2>
             <ul class="col-md-12 no-padding">
-              <li>Data in the primary datasets are in a format known as AOD or Analysis Object Data.</li>
+              <li>Data in the primary datasets are in a format known as AOD or Analysis Object Data for collision data and AODSIM for simulated data.</li>
               <li>AOD files contain the information that is needed for analysis:
                 <div>
                   <ul>
@@ -65,7 +65,7 @@
                 </div>
               </li>
               <li>AOD files can be read in <a href="http://root.cern.ch/">ROOT</a>, but they cannot be opened (and understood) as simple data tables.</li>
-              <li>Only the runs that are validated by data quality monitoring should be used in any analysis. The <a href="{{ url_for('.collection', name= 'CMS-Validated-Runs') }}">list of the validated runs</a> is provided.</li>
+              <li>Only the runs that are validated by data quality monitoring should be used in any analysis. The <a href="{{ url_for('.collection', name= 'CMS-Validation-Utilities') }}">list of the validated runs</a> is provided.</li>
             </ul>
           </div>
         </div>
@@ -80,12 +80,12 @@
                 <li>No further development is foreseen for either the data released or the software version needed to analyse them.
                   <div>
                     <ul>
-                      <li>CMS had just started data taking in 2010 and the methods have evolved since those early days, in particular to respond to the evolving beam conditions of the LHC.</li>
+                      <li>The methods have evolved since the released data were recorded.</li>
                       <li>More advanced techniques are used with recent data but the software is not compatible out-of-the-box with older data samples.</li>
                     </ul>
                   </div>
                 </li>
-                <li>The release of 2010 data is not accompanied by any simulated data. Future releases may include this information.</li>
+                <li>The release of 2010 data is not accompanied by any simulated data. The release of 2011 data includes simulated data. However, this is not a full set of simulations, but only those datasets that have been reprocessed with a software release compatible with the 2011 collision data.</li>
                 <li>If you are interested in more, please contact nearest <a href="http://cms.web.cern.ch/content/cms-collaboration">CMS university/institute</a>.</li>
               </ul>
             </div>
